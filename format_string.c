@@ -33,7 +33,7 @@ int format_string(va_list Args, const char *Str)
 			}
 			else
 			{
-				counter2 = switching1(character, Args);
+				counter2 = switching(character, Args);
 				if (counter2 >= 0 && counter2 != -1)
 				{
 					i++, character = Str[i];
