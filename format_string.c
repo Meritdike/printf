@@ -49,5 +49,5 @@ int format_string(va_list Args, const char *Str)
 			counter += _putchar(character);
 		i++;
 	}
-	return (counter);
+	return (counter);
 }
