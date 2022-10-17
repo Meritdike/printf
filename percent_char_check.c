@@ -15,5 +15,5 @@ int percent_char_check(int *flag, char character)
 		_putchar('%');
 		return (1);
 	}
-	return (0);
+	return (0);
 }
