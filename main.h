@@ -11,6 +11,8 @@ int format_string(va_list Args, const char *Str);
 int length_of_string(char *string);
 int percent_char_check(int *flag, char character);
 int print_character(va_list arg);
+int format_string(va_list Args, const char *Str);
+int percent_char_check(int *flag, char character);
 int print_string(va_list arg);
 int switching(char c, va_list arg);
 
