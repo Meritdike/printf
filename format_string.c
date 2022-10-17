@@ -23,7 +23,7 @@ int format_string(va_list Args, const char *Str)
 			character = Str[i];
 			if (character == '\0' && len == 1)
 				return (-1);
-			if (character == '\0') 
+			if (character == '\0')
 				return (counter);
 			if (character == '%')
 			{
