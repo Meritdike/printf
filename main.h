@@ -7,6 +7,7 @@
 
 int _printf(const char *format, ...);
 int _putchar(char c);
+int _puts(char *string);
 int format_string(va_list Args, const char *Str);
 int length_of_string(char *string);
 int percent_char_check(int *flag, char character);
