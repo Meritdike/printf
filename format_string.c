@@ -32,11 +32,13 @@ int format_string(va_list Args, const char *Str)
 				return (-1);
 			if (character == '\0')
 				return (counter);
-			counter2 = switching1(character, Args);
-			if (counter2 >= 0 && counter2 != -1)
-				counter = counter + counter2;
-			if (counter2 == -1 && character != '\n')
-				counter += _putchar('%');
+			{
+				counter2 = switching1(character, Args);
+				if (counter2 >= 0 && counter2 != -1)
+					counter = counter + counter2;
+				if (counter2 == -1 && character != '\n')
+					counter += _putchar('%');
+			}
 		}
 		if (character != '\0' && character != '%')
 			counter += _putchar(character);
