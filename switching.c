@@ -84,7 +84,34 @@ int switching2(char c, va_list arg)
 			counter += print_unsigned_int(arg, 2);
 			break;
 		default:
-			counter += -1;
+			counter += switching3(c, arg);
 	}
 	return (counter);
+}
+
+/**
+ *switching3 - function to print the format specifier data type
+ *@c: the format specifier
+ *@arg: va_list variable
+ *Return: number of printed characters
+ */
+
+int switching3(char c, va_list arg)
+{
+	int counter = 0;
+	
+	switch (c)
+	{
+		case 'u':
+			counter += print_unsigned_int(arg, 10);
+			break;
+		case 'x':
+			counter += print_hexadecimal(arg, "0123456789abcdef");
+			break;
+		case 'X':
+			counter += print_hexadecimal(arg, "0123456789ABCDEF");
+			break;
+		default:
+			counter += -1;
+	}
 }
