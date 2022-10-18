@@ -26,6 +26,9 @@ int print_hexadecimal(va_list arg, char *rep);
 int refactor(size_t k, size_t j, size_t length, int counter, int flag,
 char ch, char str[5], char a[16]);
 int chk_non_printable(int ch);
+int print_pointer(va_list arg);
+int print_rot13(va_list arg);
+
 
 
 #endif /* MAIN_H */
