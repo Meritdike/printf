@@ -25,6 +25,7 @@ int print_unsigned_int(va_list arg, int base);
 int print_hexadecimal(va_list arg, char *rep);
 int refactor(size_t k, size_t j, size_t length, int counter, int flag,
 char ch, char str[5], char a[16]);
+int chk_non_printable(int ch);
 
 
 #endif /* MAIN_H */
