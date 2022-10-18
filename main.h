@@ -21,6 +21,7 @@ int switching3(char c, va_list arg);
 int print_signed_int(va_list arg, int base);
 char *base_converter(char hexa_dec[], unsigned int number, int base);
 int print_unsigned_int(va_list arg, int base);
+int print_hexadecimal(va_list arg, char *rep);
 
 
 
