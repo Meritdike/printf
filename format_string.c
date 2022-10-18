@@ -43,7 +43,7 @@ int format_string(va_list Args, const char *Str)
 					counter += _putchar('%');
 			}
 		}
-		if (character != '\0' && character != '%')
+		else if (character != '\0' && character != '%')
 			counter += _putchar(character);
 		i++;
 	}
