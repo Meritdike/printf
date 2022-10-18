@@ -20,7 +20,7 @@ char *base_converter(char hexa_dec[], unsigned int number, int base)
 		number /= base;
 
 		*--pointer = hexa_dec[index];
-	}
-	while (number != 0);
-		return (pointer);
+	} while (number != 0);
+
+	return (pointer);
 }
