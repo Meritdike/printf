@@ -1,26 +1,27 @@
+#include "main.h"
+
 /**
- * base_converter - number base converter
- * @hexa_dec: hexadecimal number
- * @base: the number base to convert to.
- * @number: the number
- * Return: a string of the formatted data.
+ * convert - converts number and base into string
+ * @num: input number
+ * @base: input base
+ * @lowercase: flag if hexa values need to be lowercase
+ * Return: result string
  */
-
-char *base_converter(char hexa_dec[], unsigned int number, int base)
+char *convert(unsigned long int num, int base, int lowercase)
 {
-	int index = 0;
-	char *pointer;
-	static char cache[50];
+	static char *rep;
+	static char buffer[50];
+	char *ptr;
 
-	pointer = &cache[49];
-	*pointer = '\0';
-
+	rep = (lowercase)
+		? "0123456789abcdef"
+		: "0123456789ABCDEF";
+	ptr = &buffer[49];
+	*ptr = '\0';
 	do {
-		index = number % base;
-		number /= base;
+		*--ptr = rep[num % base];
+		num /= base;
+	} while (num != 0);
 
-		*--pointer = hexa_dec[index];
-	} while (number != 0);
-
-	return (pointer);
+	return (ptr);
 }
