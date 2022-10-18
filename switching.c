@@ -99,11 +99,14 @@ int switching2(char c, va_list arg)
 int switching3(char c, va_list arg)
 {
 	int counter = 0;
-	
+
 	switch (c)
 	{
 		case 'u':
 			counter += print_unsigned_int(arg, 10);
+			break;
+		case 'o':
+			counter += print_unsigned_int(arg, 8);
 			break;
 		case 'x':
 			counter += print_hexadecimal(arg, "0123456789abcdef");
@@ -114,4 +117,5 @@ int switching3(char c, va_list arg)
 		default:
 			counter += -1;
 	}
+	return (counter);
 }
