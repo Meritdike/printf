@@ -36,7 +36,7 @@ int format_string(va_list Args, const char *Str)
 				counter2 = switching(character, Args);
 				if (counter2 >= 0 && counter2 != -1)
 					counter = counter + counter2;
-				if (counter2 != -1 && character != '\n')
+				if (counter2 == -1 && character != '\n')
 					counter += _putchar('%');
 			}
 		}
