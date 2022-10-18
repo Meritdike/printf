@@ -76,6 +76,10 @@ int switching2(char c, va_list arg)
 		case 's':
 			counter += print_string(arg);
 			break;
+		case 'd':
+		case 'i':
+			counter += print_signed_int(arg, 10);
+			break;
 		default:
 			counter += -1;
 	}
