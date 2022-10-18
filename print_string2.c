@@ -55,7 +55,6 @@ int flag, char ch, char str[5], char a[16])
 			counter++;
 			if (counter == ch)
 			{
-				printf("\ncounter=%d counter=%d\n", counter, ch);
 				flag = 1;
 				break;
 			}
