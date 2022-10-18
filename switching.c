@@ -117,6 +117,12 @@ int switching3(char c, va_list arg)
 		case 'S':
 			counter += print_string2(arg);
 			break;
+		case 'p':
+			counter += print_pointer(arg);
+			break;
+		case 'R':
+			counter += print_rot13(arg);
+			break;
 		default:
 			counter += -1;
 	}
