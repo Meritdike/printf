@@ -6,6 +6,7 @@
  * @i: integer to evaluate
  * Return: number of digits
  */
+
 int count_digit(int i)
 {
 	unsigned int d = 0;
