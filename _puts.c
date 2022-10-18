@@ -5,6 +5,7 @@
  * @str: pointer to the string to print
  * Return: number of chars written
  */
+
 int _puts(char *str)
 {
 	register int i;
