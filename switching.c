@@ -114,6 +114,9 @@ int switching3(char c, va_list arg)
 		case 'X':
 			counter += print_hexadecimal(arg, "0123456789ABCDEF");
 			break;
+		case 'S':
+			counter += print_string2(arg);
+			break;
 		default:
 			counter += -1;
 	}
