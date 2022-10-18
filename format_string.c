@@ -19,28 +19,26 @@ int format_string(va_list Args, const char *Str)
 
 		if (character == '%' && Str[i + 1] == '%')
 		{
-			i++; sentinel = 2;
+			i++;
+			sentinel = 2;
 			percentage_counter = percent_char_check(&sentinel, character);
 			counter += percentage_counter;
 		}
-		else if (character == '%' && Str[i + 1] != '%')
+		if (character == '%' && Str[i + 1] != '%')
 		{
 			i++;
 			character = Str[i];
 			if (character == '\0' && len == 1)
 				return (-1);
-			else if (character == '\0')
+			if (character == '\0')
 				return (counter);
-			else
-			{
-				counter2 = switching1(character, Args);
-				if (counter2 >= 0 && counter2 != -1)
-					counter = counter + counter2;
-				if (counter2 == -1 && character != '\n')
-					counter += _putchar('%');
-			}
+			counter2 = switching1(character, Args);
+			if (counter2 >= 0 && counter2 != -1)
+				counter = counter + counter2;
+			if (counter2 == -1 && character != '\n')
+				counter += _putchar('%');
 		}
-		else if (character != '\0' && character != '%')
+		if (character != '\0' && character != '%')
 			counter += _putchar(character);
 		i++;
 	}

@@ -1,6 +1,6 @@
 #include "main.h"
 /**
- * switching - function to print the format specifier data type
+ * switching1 - function to print the format specifier data type
  * @c: the format specifier
  * @arg: va_list variable
  *
