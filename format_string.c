@@ -30,6 +30,8 @@ int format_string(va_list Args, const char *Str)
 			character = Str[i];
 			if (character == '\0')
 			{
+				if (len == 1)
+					return (-1);
 				return (counter);
 			}
 			else
