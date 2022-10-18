@@ -18,5 +18,9 @@ int print_string(va_list arg);
 int switching1(char c, va_list arg);
 int switching2(char c, va_list arg);
 int switching3(char c, va_list arg);
+int print_signed_int(va_list arg, int base);
+char *base_converter(char hexa_dec[], unsigned int number, int base);
+
+
 
 #endif /* MAIN_H */
