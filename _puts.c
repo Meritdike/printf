@@ -1,15 +1,15 @@
 #include "main.h"
-/**
- * _puts - A function that receives a string and prints to standard output
- * @string: the string
- *
- * Return: return 0 on success.
- */
-int _puts(char *string)
-{
-	int i;
 
-	for (i = 0; *(string + i) != '\0'; i++)
-		_putchar(*(string + i));
-	return (0);
+/**
+ * _puts - prints a string to stdout
+ * @str: pointer to the string to print
+ * Return: number of chars written
+ */
+int _puts(char *str)
+{
+	register int i;
+
+	for (i = 0; str[i] != '\0'; i++)
+		_putchar(str[i]);
+	return (i);
 }
