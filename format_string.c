@@ -23,9 +23,9 @@ int format_string(va_list Args, const char *Str)
 			character = Str[i];
 			if (character == '\0' && len == 1)
 				return (-1);
-			else if (character == '\0')
+			if (character == '\0')
 				return (counter);
-			else if (character == '%')
+			if (character == '%')
 			{
 				sentinel++;
 				percentage_counter = percent_char_check(&sentinel, character);
@@ -40,7 +40,7 @@ int format_string(va_list Args, const char *Str)
 					counter += _putchar('%');
 			}
 		}
-		if (character == '\0' && character != '%')
+		else if (character == '\0' && character != '%')
 			counter += _putchar(character);
 		i++;
 	}
