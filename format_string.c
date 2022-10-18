@@ -28,10 +28,13 @@ int format_string(va_list Args, const char *Str)
 		{
 			i++;
 			character = Str[i];
-			if (character == '\0' && len == 1)
-				return (-1);
 			if (character == '\0')
+			{
+				if (len == 1)
+					return (-1);
 				return (counter);
+			}
+			else
 			{
 				counter2 = switching1(character, Args);
 				if (counter2 >= 0 && counter2 != -1)
