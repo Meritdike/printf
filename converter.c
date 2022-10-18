@@ -21,6 +21,6 @@ char *base_converter(char hexa_dec[], unsigned int number, int base)
 
 		*--pointer = hexa_dec[index];
 	}
-	while (number != 0)
+	while (number != 0);
 		return (pointer);
 }
