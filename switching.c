@@ -80,6 +80,9 @@ int switching2(char c, va_list arg)
 		case 'i':
 			counter += print_signed_int(arg, 10);
 			break;
+		case 'b':
+			counter += print_unsigned_int(arg, 2);
+			break;
 		default:
 			counter += -1;
 	}
