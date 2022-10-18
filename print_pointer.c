@@ -36,7 +36,7 @@ int print_pointer(va_list arg)
 		else
 			arr[counter] = ((char)(tmp + 'W'));
 		counter--;
-		
+
 		decimal /= 16;
 	}
 
@@ -45,5 +45,5 @@ int print_pointer(va_list arg)
 		_putchar(*(arr + i));
 		i++;
 	}
-		return (i);
+	return (i);
 }
