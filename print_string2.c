@@ -1,5 +1,5 @@
 #include "main.h"
-#include <stdio.h>
+
 /**
  * print_string2 - a function that prints out a string
  * Non printable characters (0 < ASCII value < 32 or >= 127) are printed this
@@ -31,7 +31,7 @@ int print_string2(va_list arg)
 		for (i = 0; *(string + i) != '\0'; i++)
 		{
 			ch = *(string + i);
-			if ((ch >= 0 && ch <= 31) || (ch >= 127))
+			if ((ch >= 0 && ch <= 31) || chk_non_printable(ch))
 			{
 				length = refactor(k, j, length, counter, flag, ch, str, a);
 			}
@@ -55,6 +55,7 @@ int flag, char ch, char str[5], char a[16])
 			counter++;
 			if (counter == ch)
 			{
+				printf("\ncounter=%d counter=%d\n", counter, ch);
 				flag = 1;
 				break;
 			}
@@ -67,4 +68,23 @@ int flag, char ch, char str[5], char a[16])
 	str[4] = '\0';
 	_puts(str);
 	return (++length);
+}
+/**
+ * chk_non_printable - a function that check for non printable
+ * character greater than 126, and return 1 if true, else 0
+ * @ch: the charater to check
+ *
+ * Return: returns 1 if true, else returns 0
+ */
+int chk_non_printable(int ch)
+{
+	size_t i;
+	int print[8] = {127, 129, 141, 143, 144, 157, 160, 173};
+
+	for (i = 0; i < 8; i++)
+	{
+		if (ch == print[i])
+			return (1);
+	}
+	return (0);
 }
